@@ -1,0 +1,20 @@
+{
+  "title": "Nextjs test page",
+  "description": "Nextjs test page",
+  "english": "English",
+  "turkish": "Turkish",
+  "hardmode": "Hard Mode",
+  "normalmode": "Normal Mode",
+  "easymode": "Easy Mode",
+  "remainingwords": "Remaining Words",
+  "time": "Time",
+  "second": "Second",
+  "score": "Honey Score",
+  "delete": "Delete",
+  "check": "Check",
+  "restart": "Restart",
+  "enterword": "Enter the word here",
+  "congrats": "Congratulations, you won the game!",
+  "timeout": "The time is up, please try again.",
+  "answers": "Answers"
+}

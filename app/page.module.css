@@ -1,0 +1,402 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+/*homePage*/
+.homePage {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+/*navbar*/
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: #ffffff;
+}
+
+.menuInner {
+  display: flex;
+  align-items: center;
+}
+
+.menubck {
+  position: relative;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.menuList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.menuList li {
+  list-style-type: none;
+}
+
+.menuList li a {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+.menuList li a:hover {
+  color: #007bff;
+}
+
+.githubWithA {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+/*gameBoard*/
+.gameBoard {
+  --hex-size: 130px;
+  --hex-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 11%;
+  width: 100%;
+}
+
+.boardMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexagonContainer {
+  display: grid;
+  margin: calc(var(--hex-size) + var(--hex-gap));
+}
+
+.hexagon {
+  grid-area: 1/1;
+  width: var(--hex-size);
+  aspect-ratio: 0.866;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  background-color: #ffd700;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+  transform: translate(var(--_x, 0), var(--_y, 0)) scale(var(--_t, 1));
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.hexagon:hover {
+  background-color: #ffa500;
+}
+
+.hexagon:nth-child(1) {
+  --_x: calc(-100% - var(--hex-gap));
+}
+
+.hexagon:nth-child(7) {
+  --_x: calc(100% + var(--hex-gap));
+}
+
+.hexagon:nth-child(3),
+.hexagon:nth-child(5) {
+  --_y: calc(-75% - 0.87 * var(--hex-gap));
+}
+
+.hexagon:nth-child(4),
+.hexagon:nth-child(6) {
+  --_y: calc(75% + 0.87 * var(--hex-gap));
+}
+
+.hexagon:nth-child(3),
+.hexagon:nth-child(4) {
+  --_x: calc(-50% - 0.5 * var(--hex-gap));
+}
+
+.hexagon:nth-child(5),
+.hexagon:nth-child(6) {
+  --_x: calc(50% + 0.5 * var(--hex-gap));
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.textInput {
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.checkButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.matchedWords {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.restartButton {
+  cursor: pointer;
+}
+
+.scoreTimer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.scoreTimer p {
+  font-size: 1.2em; 
+  color: #333; 
+}
+
+
+.btnArea {
+  display: flex;
+  gap: 5px;
+}
+
+.checkButton {
+  width: 90px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkButton:hover {
+  background-color: #ffa500;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modalContent h2 {
+  margin-bottom: 10px;
+}
+
+.modalContent p {
+  margin: 10px 0;
+}
+
+.modalContent button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.languageSwitcher{
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  gap: 15px;
+}
+
+.languageSwitcher>span {
+  cursor: pointer;
+  
+}
+.languageSwitcher > span:hover {
+  color: #ffd700;
+}
+
+.menuList{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.matchedWordsPanel {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.matchedWordsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.matchedWordsList p {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* 720px */
+
+@media (max-width: 720px) {
+  .gameBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  .boardMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    gap: 100px;
+    height: 100%;
+  }
+
+  .scoreTimer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hexagonContainer {
+    margin: 0;
+    gap: 5px;
+  }
+
+  .hexagon {
+    width: calc(var(--hex-size) * 0.65);
+    font-size: 1.5em;
+  }
+
+  .inputContainer {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .textInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+  }
+
+  .btnArea {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkButton {
+    width: calc(50% - 5px);
+  }
+
+  .sidePanel {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .matchedWords {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .textInput,
+  .checkButton {
+    font-size: 0.875em;
+  }
+
+  .hexagon p {
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 411px) {
+  .gameBoard {
+    padding: 15px;
+  }
+
+  .boardMain {
+    margin-top: 100px;
+    gap: 50px;
+  }
+
+  .scoreTimer {
+    gap: 5px;
+  }
+
+  .hexagon {
+    width: calc(var(--hex-size) * 0.3);
+    font-size: 1.2em;
+  }
+
+  .textInput {
+    font-size: 0.8em;
+  }
+
+  .matchedWords {
+    gap: 5px;
+  }
+
+  .matchedWordsContainer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .matchedWordsContainer.open {
+    max-height: 1000px;
+  }
+}

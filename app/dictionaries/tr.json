@@ -1,0 +1,20 @@
+{
+  "title": "Nextjs test sayfası",
+  "description": "Nextjs test sayfası",
+  "english": "İngilizce",
+  "turkish": "Türkçe",
+  "hardmode": "Zor Mod",
+  "normalmode": "Normal Mod",
+  "easymode": "Kolay Mod",
+  "remainingwords": "Kalan Kelimeler",
+  "time": "Zaman",
+  "second": "Saniye",
+  "score": "Bal Puanı",
+  "delete": "Sil",
+  "check": "Doğrula",
+  "restart": "Yeniden Başlat",
+  "enterword": "Kelimeyi Buraya Yazın",
+  "congrats": "Tebrikler, Oyunu Kazandınız!",
+  "timeout": "Süre Doldu, Tekrar Deneyin",
+  "answers": "Cevaplar"
+}
